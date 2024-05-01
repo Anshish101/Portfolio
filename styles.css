@@ -1,0 +1,304 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    background-color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+
+/* Navigation */
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 0;
+    margin: auto;
+}
+
+.navigation .nav-links{
+    padding: 1rem;
+    margin: 0 2rem 2rem 2rem;
+    font-size: 1.8rem;
+    list-style-type: none;
+}
+
+.navigation .nav-links a{
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid black;
+    background-color: rgba(205, 230, 252, 0.3);
+    box-shadow: 0.2rem 0.2rem;
+    transition: 0.1s all ease;
+}
+
+.navigation .nav-links a:hover{
+    background-color: rgba(205, 230, 252, 0.6);
+}
+
+.navigation .nav-links a:active{
+    background-color: rgba(205, 230, 252, 1);
+    margin: 24px 0 16px 0;
+    box-shadow: 0px 0px;
+}
+
+@media only screen and (max-width:850px){
+    .navigation{
+        display: inline;
+    }
+}
+
+/* Heading */
+
+.heading{
+    height: 100px;
+    width: auto;
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(12, 1fr);
+    justify-items: center;
+}
+
+.heading h1{
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 10;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    justify-self: start;
+    margin-top: 20px;
+}
+
+.heading .logo{
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    justify-self: start;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width:850px){
+    .logo{
+        display: none;
+    }
+}
+
+/* Mission Statement */
+
+.mission{
+    width: auto;
+    padding: 10rem;
+    background-image: url("Resources/Skyscrapper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.mission h2{
+    text-align: Center;
+    position: relative;
+    top: -10rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.mission p{
+    text-align: center;
+    position: relative;
+    top: -9.5rem;
+    color: black;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width:850px){
+    .mission p{
+        top: -12.4rem;
+    }
+
+    .mission h2{
+        top: -10.8rem;
+    }
+}
+
+/* Products */
+
+.products{
+    padding: 22rem 10rem 5rem 10rem;
+    margin-top: 3rem;
+    border: 1px solid black;
+    background-image: url("Resources/HouseBG.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.products h2{
+    text-align: center;
+    position: relative;
+    top: -22rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.products p{
+    text-align: center;
+    position: relative;
+    top: -22.5rem;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.image_container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2 , 1fr);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 50px;
+    margin: -22rem auto 0 auto;
+    min-width: 50%;
+}
+
+.iamge_container .image_1{
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.image_container .image_1 img{
+    max-width: 100%;
+    margin: auto;
+}
+
+.image_container .image_2{
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.image_container .image_2 img{
+    max-width: 100%;
+    margin: auto;
+}
+
+.iamge_container .image_3{
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.image_container .image_3 img{
+    max-width: 100%;
+    margin: auto;
+}
+
+.image_container .image_4{
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.image_container .image_4 img{
+    max-width: 100%;
+    margin: auto;
+}
+
+
+.image_container .content .caption{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 850px){
+
+    .products p{
+        top: -23.5rem;
+    }
+
+    .image_container{
+        grid-template: repeat(4, 1fr) / repeat(1 , 1fr);
+    }
+
+
+    .iamge_container .image_1{
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+    }
+    
+    .image_container .image_2{
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+    }
+    
+    .iamge_container .image_3{
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .image_container .image_4{
+        grid-row: 4 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+}
+/* team */
+
+.team{
+    margin-top: 3rem;
+    background-image: url("Resources/Blue\ Background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 2rem;
+    border: 1px solid black;
+}
+
+.team h2{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.team_image img{
+    width: 400px;
+    height: auto;
+    margin: 2rem auto 0 auto;
+    display: block;
+}
+
+.team_image h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
+/* contact */
+
+.contact{
+    margin: auto;
+}
+
+.contact h2{
+    text-align: start;
+    margin: 2rem auto 0 auto;
+    padding-left: 0.8rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.contact p i{
+    padding: 0 1rem;
+}
+
+.contact .number{
+    padding: 0 1rem;
+}
+
+/* Footer */
+
+.copyright{
+    text-align: center;
+}
